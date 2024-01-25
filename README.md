@@ -46,7 +46,7 @@ The game utilizes the following design patterns:
 1. **Clone the Repository**: Clone the game repository to your local machine using Git.
 
 ```shell
-git clone [repository-url]
+git clone https://github.com/suxrobGM/galactic-outpost-game
 ```
 
 2. **Navigate to the Project Directory**:
@@ -66,3 +66,6 @@ javac GameMain.java
 java GameMain
 ```
 5. **Start Playing**: Follow the on-screen instructions to start your adventure in the Galactic Outpost!
+
+## Screenshots
+![Game Screenshot](./assets/screenshot-1.jpg)
