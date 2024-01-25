@@ -27,8 +27,8 @@ public class GameController {
      */
     public void processInput(String input) {
         var parts = input.split(" ");
-        var verb = parts[0];
-        var noun = parts.length > 1 ? parts[1] : "";
+        var verb = parts[0].toLowerCase();
+        var noun = parts.length > 1 ? parts[1].toLowerCase() : "";
 
         commandParameters.put("noun", noun);
         var response = commandDispatcher.dispatch(verb, Optional.of(commandParameters));

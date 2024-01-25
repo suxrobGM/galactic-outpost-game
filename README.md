@@ -25,6 +25,27 @@ Players can use the following commands to interact within the game:
 - `enter [location]`: Go into a room or space.
 - `eat [item]`: Consume food.
 
+### Objects, items and system
+- **Console**: Interact with the station's main control system.
+- **Engine**: Check the condition of the station's engine.
+- **Datapad**: A device containing mission updates and logs.
+- **Airlock**: Entry and exit point for spacewalks.
+- **Food Supply**: Source of nutrition for the crew.
+- **Space Snacks**: Quick and tasty treats for energy.
+- **Astronaut Ice Cream**: A special dessert for space travelers.
+- **Protein Bar**: A compact and nutritious snack.
+- **Communication System**: Key for contacting Earth and receiving instructions.
+- **Emergency Kit**: Contains vital supplies for critical situations.
+- **Antenna**: An external device essential for long-range communications.
+- **Toolkit**: A set of tools for various repair tasks.
+- **Crewmate**: Your colleagues aboard the station, a source of information and assistance.
+
+### Locations
+- **Central Hub**: The heart of the space station.
+- **Airlock**: Entry and exit point for spacewalks.
+- **Quarters**: Resting area for the crew.
+- **Engine Room**: Location of the station's main engine.
+
 ## Missions
 
 To progress through the game, players must complete the following missions:
