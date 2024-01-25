@@ -26,12 +26,29 @@ public class GameController {
      * @param input The player's input string.
      */
     public void processInput(String input) {
-        var parts = input.split(" ");
-        var verb = parts[0].toLowerCase();
-        var noun = parts.length > 1 ? parts[1].toLowerCase() : "";
+        var verb = parseVerb(input.toLowerCase());
+        var noun = parseNoun(input.toLowerCase(), verb);
 
         commandParameters.put("noun", noun);
         var response = commandDispatcher.dispatch(verb, Optional.of(commandParameters));
         view.display(response.getResult());
+    }
+
+    private String parseVerb(String input) {
+        try {
+            return input.substring(0, input.indexOf(" ")).trim();
+        }
+        catch (StringIndexOutOfBoundsException e) {
+            return input.trim();
+        }
+    }
+
+    private String parseNoun(String input, String verb) {
+        try {
+            return input.substring(verb.length()).trim();
+        }
+        catch (StringIndexOutOfBoundsException e) {
+            return "";
+        }
     }
 }

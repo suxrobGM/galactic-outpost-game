@@ -77,10 +77,14 @@ public class GameModel {
      * @param mission The mission to be marked complete.
      */
     public void completeMission(Mission mission) {
-        completedMissions.stream()
-            .filter(i -> i.getKey() == mission)
-            .findFirst()
-            .ifPresent(i -> i.setValue(true));
+        for (int i = 0; i < completedMissions.size(); i++) {
+            if (completedMissions.get(i).getKey() == mission) {
+                completedMissions.get(i).setValue(true);
+                var nextMissionIndex = (i + 1) % (completedMissions.size() - 1);
+                currentMission = completedMissions.get(nextMissionIndex).getKey();
+                break;
+            }
+        }
     }
 
      /**

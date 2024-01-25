@@ -24,11 +24,11 @@ public class GameMain {
                 controller.processInput(input);
 
                 if (model.areAllMissionsCompleted()) {
-                    System.out.println("All missions accomplished! You have successfully managed the outpost.");
+                    System.out.println("\nAll missions accomplished! You have successfully managed the outpost.");
                     System.out.println("Do you want to play again? (yes/no)");
                     input = scanner.nextLine();
-
-                    if (input == "yes") {
+  
+                    if (input.trim().toLowerCase().equals("yes")) {
                         model.resetGameState();
                         System.out.println("The game has been reset. Let's start a new adventure!");
                         continue;
